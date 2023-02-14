@@ -1,0 +1,10 @@
+echo "... Cargando los modulos ..."
+module load gnu8/8.3.0
+module load cuda/10.2.89
+echo "... Compilando ..."
+make clean
+make
+echo "... Ejecutando ..."
+cd resultados
+sbatch job.sh
+
